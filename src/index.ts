@@ -11,7 +11,7 @@ const Plugin = {
     );
     const service =  new SnotifyService();
     service.setDefaults(options);
-    Vue.prototype.$snotify = service;
+    Vue.snotify = Vue.prototype.$snotify = service;
     Vue.component('vue-snotify', Snotify);
 
     // auto install
